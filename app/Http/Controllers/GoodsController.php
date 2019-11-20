@@ -55,7 +55,6 @@ class GoodsController extends Controller
         //实例化数据表
         $flight = new Flight;
         $res = $flight->where('id',$id)->get();
-        date_default_timezone_set('PRC');
         $arr = [];
         foreach($res as $k => $y){
             $arr[$k]['name'] = $y->name;
